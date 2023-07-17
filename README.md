@@ -132,7 +132,7 @@ CROSS JOIN
 ```
 
 # Question 4
-**This needs to return quickly, please include any indexes in your script**
+**This needs to return quickly and should not scan the entire table (seq scan), please include any indexes in your script**
 
 For this challenge we have a "large" table of transactions. We need to know which organizations have transaction data.  To query this a distinct won't work regardless of indexes as it will still need to do a full sequence scan.
 
