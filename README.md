@@ -1,12 +1,11 @@
 # Smartwyre SQL Exercises
 ## Question 1
 
-**This needs to return quickly, please include any indexes in your script**
+**This needs to return quickly and should not scan the entire table (seq scan), please include any indexes in your script**
 
-For this challenge we have two tables of products and prices. Every product has lots of prices published throughout the year. We would like to see for product ids 100, 200, 300 and 400 the most recently published price which was published on or
-before the 10th June 2022.
+For this challenge we have two tables of products and prices. Every product has lots of prices published throughout the year. We would like to see for product ids 100, 200, 300 and 400 the most recently published price which was published on or before the 10th June 2022.
 
-If a price was published on the 11th June 2022 it would not be valid as it was published after the requested date. If it was published on or before the 10th June 2022 it is valid.
+If a price was published on the 11th June 2022 it would not be valid as it was published after the requested date. If it was published on or before the 10th June 2022 it is valid.  The query should return a single price per product.
 
 The product may or may not have a price that was published on the 10th June 2022.
 
@@ -49,7 +48,7 @@ CROSS JOIN
 ```
 
 ## Question 2
-**This needs to return quickly, please include any indexes in your script**
+**This needs to return quickly and should not scan the entire table (seq scan), please include any indexes in your script**
 
 For this challenge we have a "large" table of transactions. We need to ensure that the query below completes as quickly as possible and performs an index only scan selecting:
 
